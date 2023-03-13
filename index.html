@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/a07811c452.js" crossorigin="anonymous"></script>
+    <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+}
+
+.header .logo {
+    font-size:4rem;
+  
+  color:#fefefe;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color:#fefefe;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    border-radius:1rem;
+    background:#fefefe;
+    color: black;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+  color: #fefefe;
+}
+.headingfirst{
+    font-size: 3rem;
+    color:#29f505;
+}
+
+.button{
+        display:flex;
+        justify-content: center;
+        background-color: aqua;
+        border:1vh solid grey;
+        
+    }
+main{
+    
+    font-size:3rem;
+    height:100vh;
+}
+body{
+    background-color:grey;
+}
+
+/* 980px  */
+@media (max-width: 62em) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+    
+    color: white;
+    
+  }
+  .mobile-navbar-btn #closeicon {
+    display: none;
+    
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .header .logo {
+    width: 40%;
+  }
+
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background: #0390f5;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the tranisition  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-navbar-btn #closeicon {
+    display:block;
+    
+  }
+
+  .active .mobile-navbar-btn #baricon {
+    display: none;
+    background-color: white;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Payment</h1>
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="#">Home</a></li>
+          <li><a class="navbar-link" href="https://rohit131313.github.io/payment/">About Us</a></li>
+          <li><a class="navbar-link" href="https://rohit131313.github.io/2nd-slide/">Gallery</a></li>
+          <li><a class="navbar-link" href="https://rohit131313.github.io/3rd-slide/">Our Services</a></li>
+
+<li><a class="navbar-link" href="https://rohit131313.github.io/4th-slide/”>Testimonial</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-navbar-btn">
+        <i  id="baricon" class="fa-solid fa-bars"></i>
+        <i  id="closeicon" class="fa-solid fa-xmark"></i>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+            <h1 class="headingfirst">Learn Meesho Payment Reconciliation</h1>
+            <p>Streamline your business operations with our comprehensive course on Meesho Payment Reconciliation. </p>
+            <h2 class="headingfirst">What You'll Learn</h2>
+            <ul>
+                <li>How to reconcile your Meesho payments</li>
+                <li>How to track your sales and payments accurately</li>
+                <li>How to use our automatic reconciliation sheet</li>
+                <li>Best practices for financial management</li>
+            </ul>
+            <h2 class="headingfirst">Course Details</h2>
+            <p>The course consists of:</p>
+            <ul>
+                <li>4 modules with 10 lessons each</li>
+                <li>Self-paced learning with lifetime access</li>
+                <li>Video tutorials and downloadable resources</li>
+                <li>Expert support and community forum</li>
+            </ul>
+            <h2 class="headingfirst">Get the Automatic Reconciliation Sheet</h2>
+            <p>In addition to the course, you will receive our Automatic Reconciliation Sheet that will help you streamline your payment reconciliation process.</p>
+            <h2 class="headingfirst">Enroll Now</h2>
+            <p>Enroll now for just $99 and get instant access to the course and the automatic reconciliation sheet.</p>
+            <a href="https://rohit131313.github.io/payment5/" class="button">Enroll Now</a>
+        </div>
+      </section>
+     <script>var mobile_nav = document.querySelector(".mobile-navbar-btn");
+        var nav_header = document.querySelector(".header");
+        
+        var toggleNavbar = () => {
+       nav_header.classList.toggle("active");
+        };
+        
+        mobile_nav.addEventListener("click", () => toggleNavbar());</script>
+  </body>
+</html>
